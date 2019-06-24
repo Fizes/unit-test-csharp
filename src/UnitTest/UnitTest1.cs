@@ -52,5 +52,14 @@ namespace UnitTest
 
             Assert.AreEqual(1,calc.Divide(7));
         }
+
+        [TestMethod]
+        public void TestShould_SubstractDouble()
+        {
+            var calc = new Calculator.Calculator();
+            calc.Substract(9223372036854775807);
+
+            Assert.AreEqual(-9223372036854775808, calc.Substract(1));
+        }
     }
 }
